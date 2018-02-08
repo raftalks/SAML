@@ -18,7 +18,7 @@
         },
         "laravel": {
             "providers": [
-                "Raftalks\\SAML\\IdentityProvider\\IdentityServiceProvider"
+                "Raftalks\\SAML\\SamlServiceProvider"
             ]
         }
     },

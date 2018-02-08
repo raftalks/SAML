@@ -11,7 +11,7 @@ namespace Raftalks\SAML\Console;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use phpseclib\Crypt\RSA;
-use Raftalks\SAML\IdentityProvider\Identity;
+use Raftalks\SAML\Identity;
 
 class IdpCertCommand extends Command
 {

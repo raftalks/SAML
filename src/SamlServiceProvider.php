@@ -2,18 +2,19 @@
 /**
  * Created by PhpStorm.
  * User: raf
- * Date: 07/02/2018
- * Time: 4:25 PM
+ * Date: 08/02/2018
+ * Time: 11:38 AM
  */
 
-namespace Raftalks\SAML\IdentityProvider;
+namespace Raftalks\SAML;
 
 
 use Illuminate\Support\ServiceProvider;
 use Raftalks\SAML\Console\IdpCertCommand;
 
-class IdentityServiceProvider extends ServiceProvider
+class SamlServiceProvider extends ServiceProvider
 {
+
 
     public function boot()
     {
@@ -21,11 +22,11 @@ class IdentityServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
 
             $this->publishes([
-                __DIR__.'/../../resources/config/saml.php' => config_path('saml.php')
+                __DIR__ . '/../resources/config/saml.php' => config_path('saml.php')
             ], 'config');
 
             $this->commands([
-               IdpCertCommand::class
+                IdpCertCommand::class
             ]);
         }
 
@@ -35,7 +36,8 @@ class IdentityServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../resources/config/saml.php', 'saml'
+            __DIR__ . '/../resources/config/saml.php', 'saml'
         );
     }
+
 }

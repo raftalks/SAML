@@ -6,7 +6,7 @@
  * Time: 5:05 PM
  */
 
-namespace Raftalks\SAML\IdentityProvider;
+namespace Raftalks\SAML;
 
 
 class Identity
